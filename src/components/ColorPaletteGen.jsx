@@ -45,14 +45,14 @@ const ColorPaletteGen = () => {
             your design or coding projects!
           </p>
         </div>
-        <div className="flex justify-center gap-9 mt-10 flex-wrap flex-auto xl:mx-48 max-sm:px-2">
+        <div className="flex justify-center gap-9 mt-10 flex-wrap flex-auto xl:mx-40 max-sm:px-2">
           {colors.map((color, index) => (
-            <div key={index} className="p-3 bg-white rounded-sm">
+            <div key={index} className="p-3 bg-white rounded-sm max-sm:p-1">
               <div
-                className="h-40 w-40 flex items-center justify-center rounded-lg shadow-md max-sm:h-38 max-sm:w-38 "
+                className="h-40 w-40 flex items-center justify-center rounded-lg shadow-md max-sm:h-28 max-sm:w-28 "
                 style={{ backgroundColor: color }}
               ></div>
-              <p className={`font-mono p-1 flex items-center justify-between ${copied === color ? "text-blue-500 font-bold" : "text-black"}`}>
+              <p className={`font-mono flex items-center justify-between ${copied === color ? "text-blue-500 font-bold" : "text-black"}`}>
                 {copied === color ? "Copied!" : color}
                 <MdContentCopy
                   onClick={() => copyToClipboard(color)}
